@@ -40,7 +40,7 @@ func (s *Server) handleDeleteBill(c *gin.Context) {
 	var err error
 	billId, err := strconv.ParseInt(c.Param("bill_id"), 10, 32)
 	if err != nil || billId < 1 {
-		log.Fatalln("strategy_plan_id should be a positive integer")
+		log.Fatalln("bill Id should be a positive integer")
 		return
 	}
 
